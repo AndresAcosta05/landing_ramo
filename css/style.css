@@ -1,0 +1,155 @@
+/*VARIABLES*/
+:root {
+    --color-principal: rgba(213, 10, 39, 255);
+    --color-secundario: rgba(0,107,173,255);
+    --fuente-ramo:'Alex Brush', cursive;
+
+}
+/*CONFIG GOBLAB*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+
+span {
+    font-family: var(--fuente-ramo);
+    color: var(--color-principal);
+    text-transform: capitalize;
+}
+
+p{
+    text-align: justify;
+}
+
+h2 {
+    text-transform: capitalize;
+    font-size: 40px;
+}
+/*HEADER*/
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-principal);
+    margin: 0 auto;
+}
+
+.links_nav {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link_nav {
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 18px;
+    width: 100%;
+}
+
+.titulo {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+}
+/*SECCION PRINCIPAL*/
+.principal {
+    width: 100%;
+    background-image: url('../assets/img/productos.jpg');
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.principal_sombra {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    color: white;
+}
+
+.principal_titulo {
+    font-size: 50px;
+    width: 70%;
+    margin: auto;
+}
+
+.principal_contenido {
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+}
+
+.principal_contenido > button {
+    margin-top: 20px;
+    width: 130px;
+    height: 50px;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--color-principal);
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.principal_contenido > button:hover {
+    background-color: var(--color-secundario);
+}
+
+/*SECCION PORQUE ELEGIR RAMO*/
+.elegir, .opiniones{
+    width: 90%;
+    margin: 20px auto 0;
+}
+
+.beneficios { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10px;
+}
+.beneficio {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    background-color: var(--color-principal);
+    border-radius: 20px;
+    padding: 20px;
+}
+.beneficio_logo {
+    height: 100px;
+    width: 100px;
+    background-color: var(--color-secundario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60%;
+    margin: 0 auto;
+}
+
+.beneficio_texto {
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}
+/*SECCION OPINIONES*/
+
+/*FOOTER*/
+footer {
+    margin-top: 20px;
+    color: white;
+    background-color: var(--color-secundario);
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}

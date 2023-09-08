@@ -27,6 +27,7 @@ p{
 h2 {
     text-transform: capitalize;
     font-size: 40px;
+
 }
 /*HEADER*/
 .nav{
@@ -103,14 +104,14 @@ h2 {
     cursor: pointer;
 }
 
-.principal_contenido > button:hover {
+.principal_contenido > button:hover, .informacion_sombra > button:hover {
     background-color: var(--color-secundario);
 }
 
 /*SECCION PORQUE ELEGIR RAMO*/
-.elegir, .opiniones{
+.elegir, .opiniones, .informacion{
     width: 90%;
-    margin: 20px auto 0;
+    margin: 40px auto 0;
 }
 
 .beneficios { 
@@ -143,13 +144,179 @@ h2 {
     font-size: 20px;
 }
 /*SECCION OPINIONES*/
+.opiniones_contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+}
 
+.opinion {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    column-gap: 20px;
+}
+
+.opinion_imagen {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.opinion_imagen > img {
+    border-radius: 50%;
+}
+
+.opinion_texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.opinion_texto > p{
+    width: 80%;
+    text-align: justify;
+}
+/*SECCION FORMULARIO*/
+.informacion_contenido {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+}
+.informacion_producto {
+    background-image: url('../assets/img/producto.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+.informacion_sombra {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 20px;
+}
+.informacion_sombra > button {
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    background-color: var(--color-principal);
+    cursor: pointer;
+}
+
+.informacion_form{
+    width: 100%;
+    height: auto;
+    background-color: var(--color-secundario);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+}
+
+.informacion_input {
+    width: 90%;
+    height: 30px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.informacion_boton {
+    margin: 20px auto;
+    width: 90px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--color-principal);
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/*REDES*/
+.redes {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.redes > a {
+    margin-left: 10px;
+}
 /*FOOTER*/
 footer {
-    margin-top: 20px;
+    padding: 10px;
     color: white;
     background-color: var(--color-secundario);
     width: 100%;
     bottom: 0;
     text-align: center;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1200px) {
+    .links_nav {
+        width: 30%;
+    }
+}
+
+@media (max-width: 970px) {
+    .opiniones_contenido, .informacion_contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .opinion, .informacion_form {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .nav, .links_nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .beneficios {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .beneficio {
+        margin-top: 20px;
+    }
+
+    .link_nav, .titulo {
+        display: block;
+        margin-top: 10px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .principal_sombra, .opinion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .opinion_texto {
+        margin-top: 20px;
+    }
+
+    .principal_titulo {
+        font-size: 30px;
+    }
 }
